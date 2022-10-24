@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.sliderImg1,
+.sliderImg2,
+.sliderImg3,
+.sliderImg4 {
+  height: 600px;
+  object-fit: cover;
+}
+
+.card {
+  height: -moz-max-content;
+  height: fit-content;
+  animation-name: colorChange;
+  animation-duration: 4s;
+}
+
+.card img:hover {
+  z-index: 2;
+  transform: rotate(10deg);
+}
+
+@keyframes colorChange {
+  from {background-color: rgb(255, 255, 255);}
+  to {background-color: rgb(202, 202, 202);}
+}
+
+@media (min-width: 320px) and (max-width: 576px) {
+  .sliderImg1,
+  .sliderImg2,
+  .sliderImg3,
+  .sliderImg4 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+}
